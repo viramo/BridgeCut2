@@ -1,14 +1,9 @@
 import Foundation
 
 final class FCPXMLConverter {
-    private let genericRoles: Set<String> = [
-        "dialogue", "music", "effects", "ambience"
-    ]
+    private let bwfReader = BWFMetadataReader()
 
-    func convert(
-        inputURL: URL,
-        includeGenericRoles: Bool = false
-    ) throws -> ConversionResult {
+    func convert(inputURL: URL) throws -> ConversionResult {
         let actualXMLURL = try resolveXMLURL(from: inputURL)
         let data = try Data(contentsOf: actualXMLURL)
 
@@ -24,97 +19,83 @@ final class FCPXMLConverter {
             throw BridgeCutError.noFCPXMLRoot
         }
 
-        let activeAudioAngleIDs = Set(
-            try root.nodes(
-                forXPath:
-                ".//sequence/spine/mc-clip/mc-source[" +
-                "@angleID and " +
-                "(@srcEnable='audio' or @srcEnable='all' or not(@srcEnable))" +
-                "]"
-            )
-            .compactMap {
-                ($0 as? XMLElement)?
-                    .attribute(forName: "angleID")?
-                    .stringValue
-            }
-        )
-
-        let angleNodes = try root.nodes(
-            forXPath: "./resources/media/multicam/mc-angle"
-        )
-
+        let assets = try assetIndex(in: root)
         var changes: [ConversionChange] = []
+        var angleExpansionMap: [String: [String]] = [:]
 
-        for node in angleNodes {
-            guard let angle = node as? XMLElement,
-                  let angleID = angle
+        let multicams = try root.nodes(
+            forXPath: "./resources/media/multicam"
+        )
+
+        for multicamNode in multicams {
+            guard let multicam = multicamNode as? XMLElement else {
+                continue
+            }
+
+            let angles = try multicam.nodes(
+                forXPath: "./mc-angle"
+            ).compactMap { $0 as? XMLElement }
+
+            for angle in angles {
+                guard let oldAngleID = angle
                     .attribute(forName: "angleID")?
-                    .stringValue,
-                  activeAudioAngleIDs.contains(angleID)
-            else {
-                continue
-            }
-
-            let roleNodes = try angle.nodes(
-                forXPath: ".//audio-channel-source[@role]"
-            )
-
-            let roles = roleNodes.compactMap {
-                ($0 as? XMLElement)?
-                    .attribute(forName: "role")?
                     .stringValue
+                else {
+                    continue
+                }
+
+                guard let audio = try angle.nodes(
+                    forXPath: "./clip/audio"
+                ).first as? XMLElement,
+                let assetRef = audio
+                    .attribute(forName: "ref")?
+                    .stringValue,
+                let asset = assets[assetRef]
+                else {
+                    continue
+                }
+
+                let channelCount = Int(
+                    asset.attribute(forName: "audioChannels")?
+                        .stringValue ?? "1"
+                ) ?? 1
+
+                if channelCount > 1,
+                   let wavURL = try originalMediaURL(for: asset),
+                   wavURL.pathExtension.lowercased() == "wav",
+                   FileManager.default.fileExists(atPath: wavURL.path),
+                   let tracks = try? bwfReader.readTracks(from: wavURL),
+                   !tracks.isEmpty {
+
+                    let newAngleIDs = try expandPolyphonicAngle(
+                        angle,
+                        inside: multicam,
+                        audioElement: audio,
+                        assetRef: assetRef,
+                        tracks: tracks,
+                        changes: &changes
+                    )
+
+                    angleExpansionMap[oldAngleID] = newAngleIDs
+                } else {
+                    try renameMonoAngleFromExistingRole(
+                        angle,
+                        changes: &changes
+                    )
+                }
             }
-
-            let candidates = roles.compactMap {
-                displayName(
-                    from: $0,
-                    includeGenericRoles: includeGenericRoles
-                )
-            }
-
-            guard let desired = mostFrequent(candidates),
-                  !desired.isEmpty else {
-                continue
-            }
-
-            let oldName = angle
-                .attribute(forName: "name")?
-                .stringValue ?? ""
-
-            guard oldName != desired else {
-                continue
-            }
-
-            if let existingName = angle.attribute(forName: "name") {
-                existingName.stringValue = desired
-            } else {
-                angle.addAttribute(
-                    XMLNode.attribute(
-                        withName: "name",
-                        stringValue: desired
-                    ) as! XMLNode
-                )
-            }
-
-            changes.append(
-                ConversionChange(
-                    oldName: oldName,
-                    newName: desired,
-                    sourceRole: roles.first ?? ""
-                )
-            )
         }
+
+        try replaceTimelineAudioSources(
+            in: root,
+            using: angleExpansionMap
+        )
 
         guard !changes.isEmpty else {
             throw BridgeCutError.noChanges
         }
 
         let outputURL = makeOutputURL(for: inputURL)
-
-        // Critical rule:
-        // Only active mc-angle "name" attributes are changed.
-        // We do not touch cuts, offsets, durations, lanes, srcCh,
-        // audioChannels, audioLayout, mono/stereo or multicam nesting.
         let outputData = document.xmlData(
             options: [.nodePrettyPrint, .nodePreserveAll]
         )
@@ -126,7 +107,265 @@ final class FCPXMLConverter {
         )
     }
 
-    private func resolveXMLURL(from inputURL: URL) throws -> URL {
+    private func expandPolyphonicAngle(
+        _ originalAngle: XMLElement,
+        inside multicam: XMLElement,
+        audioElement: XMLElement,
+        assetRef: String,
+        tracks: [BWFTrack],
+        changes: inout [ConversionChange]
+    ) throws -> [String] {
+        guard let originalClip = try originalAngle.nodes(
+            forXPath: "./clip"
+        ).first as? XMLElement else {
+            return []
+        }
+
+        let oldAngleName = originalAngle
+            .attribute(forName: "name")?
+            .stringValue ?? "Polyphonic WAV"
+
+        guard let parent = originalAngle.parent as? XMLElement,
+              let originalIndex = parent.children?
+                .firstIndex(where: { $0 === originalAngle })
+        else {
+            return []
+        }
+
+        var newAngleIDs: [String] = []
+        var insertionIndex = originalIndex
+
+        for track in tracks {
+            let angleID = UUID().uuidString
+            newAngleIDs.append(angleID)
+
+            let newAngle = XMLElement(name: "mc-angle")
+            newAngle.addAttribute(
+                XMLNode.attribute(
+                    withName: "name",
+                    stringValue: track.name
+                ) as! XMLNode
+            )
+            newAngle.addAttribute(
+                XMLNode.attribute(
+                    withName: "angleID",
+                    stringValue: angleID
+                ) as! XMLNode
+            )
+
+            let newClip = XMLElement(name: "clip")
+            copyAttributes(
+                from: originalClip,
+                to: newClip
+            )
+
+            let newAudio = XMLElement(name: "audio")
+            copySelectedAttributes(
+                from: audioElement,
+                to: newAudio,
+                names: ["ref", "offset", "start", "duration"]
+            )
+
+            setAttribute(
+                named: "ref",
+                value: assetRef,
+                on: newAudio
+            )
+            setAttribute(
+                named: "srcCh",
+                value: String(track.interleaveIndex),
+                on: newAudio
+            )
+            setAttribute(
+                named: "role",
+                value: "dialogue.\(track.name)",
+                on: newAudio
+            )
+
+            newClip.addChild(newAudio)
+
+            let channelSource = XMLElement(
+                name: "audio-channel-source"
+            )
+            setAttribute(
+                named: "srcCh",
+                value: String(track.interleaveIndex),
+                on: channelSource
+            )
+            setAttribute(
+                named: "role",
+                value: "dialogue.\(track.name)",
+                on: channelSource
+            )
+            newClip.addChild(channelSource)
+
+            if let metadata = try originalClip.nodes(
+                forXPath: "./metadata"
+            ).first {
+                newClip.addChild(metadata.copy() as! XMLNode)
+            }
+
+            newAngle.addChild(newClip)
+            parent.insertChild(
+                newAngle,
+                at: insertionIndex
+            )
+            insertionIndex += 1
+
+            changes.append(
+                ConversionChange(
+                    oldName: oldAngleName,
+                    newName: track.name,
+                    sourceRole:
+                        "WAV channel \(track.interleaveIndex)"
+                )
+            )
+        }
+
+        originalAngle.detach()
+        return newAngleIDs
+    }
+
+    private func replaceTimelineAudioSources(
+        in root: XMLElement,
+        using expansionMap: [String: [String]]
+    ) throws {
+        let sourceNodes = try root.nodes(
+            forXPath: ".//sequence/spine/mc-clip/mc-source"
+        )
+
+        for node in sourceNodes {
+            guard let source = node as? XMLElement,
+                  let oldAngleID = source
+                    .attribute(forName: "angleID")?
+                    .stringValue,
+                  let newAngleIDs = expansionMap[oldAngleID]
+            else {
+                continue
+            }
+
+            let enabled = source
+                .attribute(forName: "srcEnable")?
+                .stringValue ?? "all"
+
+            guard enabled == "audio" || enabled == "all",
+                  let parent = source.parent as? XMLElement,
+                  let index = parent.children?
+                    .firstIndex(where: { $0 === source })
+            else {
+                continue
+            }
+
+            var insertionIndex = index
+
+            for newAngleID in newAngleIDs {
+                let newSource = XMLElement(name: "mc-source")
+                setAttribute(
+                    named: "angleID",
+                    value: newAngleID,
+                    on: newSource
+                )
+                setAttribute(
+                    named: "srcEnable",
+                    value: "audio",
+                    on: newSource
+                )
+
+                parent.insertChild(
+                    newSource,
+                    at: insertionIndex
+                )
+                insertionIndex += 1
+            }
+
+            source.detach()
+        }
+    }
+
+    private func renameMonoAngleFromExistingRole(
+        _ angle: XMLElement,
+        changes: inout [ConversionChange]
+    ) throws {
+        let roleNodes = try angle.nodes(
+            forXPath: ".//audio-channel-source[@role]"
+        )
+
+        guard let role = roleNodes.compactMap({
+            ($0 as? XMLElement)?
+                .attribute(forName: "role")?
+                .stringValue
+        }).first,
+        let desired = displayName(from: role)
+        else {
+            return
+        }
+
+        let oldName = angle
+            .attribute(forName: "name")?
+            .stringValue ?? ""
+
+        guard oldName != desired else {
+            return
+        }
+
+        setAttribute(
+            named: "name",
+            value: desired,
+            on: angle
+        )
+
+        changes.append(
+            ConversionChange(
+                oldName: oldName,
+                newName: desired,
+                sourceRole: role
+            )
+        )
+    }
+
+    private func assetIndex(
+        in root: XMLElement
+    ) throws -> [String: XMLElement] {
+        let assets = try root.nodes(
+            forXPath: "./resources/asset[@id]"
+        )
+
+        var result: [String: XMLElement] = [:]
+
+        for node in assets {
+            guard let asset = node as? XMLElement,
+                  let id = asset
+                    .attribute(forName: "id")?
+                    .stringValue
+            else {
+                continue
+            }
+
+            result[id] = asset
+        }
+
+        return result
+    }
+
+    private func originalMediaURL(
+        for asset: XMLElement
+    ) throws -> URL? {
+        guard let mediaRep = try asset.nodes(
+            forXPath: "./media-rep[@kind='original-media']"
+        ).first as? XMLElement,
+        let src = mediaRep
+            .attribute(forName: "src")?
+            .stringValue
+        else {
+            return nil
+        }
+
+        return URL(string: src)
+    }
+
+    private func resolveXMLURL(
+        from inputURL: URL
+    ) throws -> URL {
         let ext = inputURL.pathExtension.lowercased()
 
         if ext == "fcpxml" {
@@ -137,8 +376,12 @@ final class FCPXMLConverter {
             throw BridgeCutError.invalidInput
         }
 
-        let directInfo = inputURL.appendingPathComponent("Info.fcpxml")
-        if FileManager.default.fileExists(atPath: directInfo.path) {
+        let directInfo = inputURL
+            .appendingPathComponent("Info.fcpxml")
+
+        if FileManager.default.fileExists(
+            atPath: directInfo.path
+        ) {
             return directInfo
         }
 
@@ -151,7 +394,8 @@ final class FCPXMLConverter {
         }
 
         for case let candidate as URL in enumerator {
-            if candidate.pathExtension.lowercased() == "fcpxml" {
+            if candidate.pathExtension.lowercased()
+                == "fcpxml" {
                 return candidate
             }
         }
@@ -160,22 +404,30 @@ final class FCPXMLConverter {
     }
 
     private func displayName(
-        from role: String,
-        includeGenericRoles: Bool
+        from role: String
     ) -> String? {
         let parts = role
             .split(separator: ".", maxSplits: 1)
             .map(String.init)
 
         let main = parts.first?
-            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            .trimmingCharacters(
+                in: .whitespacesAndNewlines
+            ) ?? ""
 
         let sub = parts.count > 1
-            ? parts[1].trimmingCharacters(in: .whitespacesAndNewlines)
+            ? parts[1].trimmingCharacters(
+                in: .whitespacesAndNewlines
+            )
             : ""
 
+        let generic: Set<String> = [
+            "dialogue", "music",
+            "effects", "ambience"
+        ]
+
         if !main.isEmpty,
-           !genericRoles.contains(main.lowercased()) {
+           !generic.contains(main.lowercased()) {
             return main
         }
 
@@ -186,38 +438,73 @@ final class FCPXMLConverter {
         )
 
         if !cleanSub.isEmpty,
-           !genericRoles.contains(cleanSub.lowercased()) {
+           !generic.contains(cleanSub.lowercased()) {
             return cleanSub
         }
 
-        return includeGenericRoles && !main.isEmpty
-            ? main
-            : nil
+        return nil
     }
 
-    private func mostFrequent(_ values: [String]) -> String? {
-        guard !values.isEmpty else {
-            return nil
+    private func copyAttributes(
+        from source: XMLElement,
+        to destination: XMLElement
+    ) {
+        for attribute in source.attributes ?? [] {
+            destination.addAttribute(
+                attribute.copy() as! XMLNode
+            )
         }
-
-        let counts = Dictionary(
-            grouping: values,
-            by: { $0 }
-        )
-        .mapValues(\.count)
-
-        return counts.max {
-            $0.value < $1.value
-        }?.key
     }
 
-    private func makeOutputURL(for inputURL: URL) -> URL {
+    private func copySelectedAttributes(
+        from source: XMLElement,
+        to destination: XMLElement,
+        names: [String]
+    ) {
+        for name in names {
+            guard let value = source
+                .attribute(forName: name)?
+                .stringValue else {
+                continue
+            }
+
+            setAttribute(
+                named: name,
+                value: value,
+                on: destination
+            )
+        }
+    }
+
+    private func setAttribute(
+        named name: String,
+        value: String,
+        on element: XMLElement
+    ) {
+        if let existing = element
+            .attribute(forName: name) {
+            existing.stringValue = value
+        } else {
+            element.addAttribute(
+                XMLNode.attribute(
+                    withName: name,
+                    stringValue: value
+                ) as! XMLNode
+            )
+        }
+    }
+
+    private func makeOutputURL(
+        for inputURL: URL
+    ) -> URL {
         let stem = inputURL
             .deletingPathExtension()
             .lastPathComponent
 
         return inputURL
             .deletingLastPathComponent()
-            .appendingPathComponent("\(stem)_BridgeCut.fcpxml")
+            .appendingPathComponent(
+                "\(stem)_BridgeCut.fcpxml"
+            )
     }
 }

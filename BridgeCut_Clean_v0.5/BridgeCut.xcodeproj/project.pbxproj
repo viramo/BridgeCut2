@@ -10,8 +10,8 @@
 		111111111111111111111111 /* BridgeCutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211111111111111111111111 /* BridgeCutApp.swift */; };
 		111111111111111111111112 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211111111111111111111112 /* ContentView.swift */; };
 		E85ED7D230030F37005BD578 /* BWFMetadataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85ED7D130030F37005BD578 /* BWFMetadataReader.swift */; };
-		E85ED7D430030F66005BD578 /* FCPXMLConverter .swift in Sources */ = {isa = PBXBuildFile; fileRef = E85ED7D330030F65005BD578 /* FCPXMLConverter .swift */; };
-		E85ED7D630030F7C005BD578 /* Models 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85ED7D530030F7C005BD578 /* Models 2.swift */; };
+		E85ED7D430030F66005BD578 /* FCPXMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85ED7D330030F65005BD578 /* FCPXMLConverter.swift */; };
+		E85ED7D630030F7C005BD578 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85ED7D530030F7C005BD578 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +19,8 @@
 		211111111111111111111111 /* BridgeCutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeCutApp.swift; sourceTree = "<group>"; };
 		211111111111111111111112 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E85ED7D130030F37005BD578 /* BWFMetadataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFMetadataReader.swift; sourceTree = "<group>"; };
-		E85ED7D330030F65005BD578 /* FCPXMLConverter .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FCPXMLConverter .swift"; sourceTree = "<group>"; };
-		E85ED7D530030F7C005BD578 /* Models 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models 2.swift"; sourceTree = "<group>"; };
+		E85ED7D330030F65005BD578 /* FCPXMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPXMLConverter.swift; sourceTree = "<group>"; };
+		E85ED7D530030F7C005BD578 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,11 +45,11 @@
 		411111111111111111111111 /* BridgeCut */ = {
 			isa = PBXGroup;
 			children = (
-				E85ED7D530030F7C005BD578 /* Models 2.swift */,
+				E85ED7D530030F7C005BD578 /* Models.swift */,
 				E85ED7D130030F37005BD578 /* BWFMetadataReader.swift */,
 				211111111111111111111111 /* BridgeCutApp.swift */,
 				211111111111111111111112 /* ContentView.swift */,
-				E85ED7D330030F65005BD578 /* FCPXMLConverter .swift */,
+				E85ED7D330030F65005BD578 /* FCPXMLConverter.swift */,
 			);
 			path = BridgeCut;
 			sourceTree = "<group>";
@@ -130,11 +130,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E85ED7D430030F66005BD578 /* FCPXMLConverter .swift in Sources */,
+				E85ED7D430030F66005BD578 /* FCPXMLConverter.swift in Sources */,
 				111111111111111111111111 /* BridgeCutApp.swift in Sources */,
 				111111111111111111111112 /* ContentView.swift in Sources */,
 				E85ED7D230030F37005BD578 /* BWFMetadataReader.swift in Sources */,
-				E85ED7D630030F7C005BD578 /* Models 2.swift in Sources */,
+				E85ED7D630030F7C005BD578 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

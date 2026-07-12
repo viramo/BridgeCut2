@@ -30,7 +30,7 @@ enum BridgeCutError: LocalizedError {
         case .noFCPXMLRoot:
             return "The selected XML does not contain an fcpxml root element."
         case .noChanges:
-            return "No custom Final Cut Pro audio roles or subroles were found on active multicam audio angles."
+            return "No compatible audio roles or polyphonic WAV channel names were found."
         }
     }
 }
