@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.14">
+    <resources>
+        <format id="r1" name="FFVideoFormat1080p30" frameDuration="100/3000s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)"/>
+        <media id="r2" name="megaro 2026" uid="VseyOSYCR+GKygk/kIlicQ" modDate="2026-07-11 18:18:32 +0300">
+            <multicam format="r3" tcStart="0s" tcFormat="NDF">
+                <mc-angle name="a" angleID="fCeGjwuKTd6tPCNnAX+CzQ">
+                    <gap name="Gap" offset="0s" start="86400314/24000s" duration="12414402/24000s"/>
+                    <clip offset="12414402/24000s" name="01" duration="67844777/24000s" format="r4" tcFormat="NDF">
+                        <conform-rate scaleEnabled="0" srcFrameRate="29.97"/>
+                        <adjust-conform type="none"/>
+                        <adjust-orientation mapping="normal"/>
+                        <adjust-volume amount="-16dB"/>
+                        <video ref="r5" offset="0s" duration="84806722/30000s">
+                            <adjust-stabilization enabled="0" type="automatic"/>
+                            <audio ref="r5" lane="-1" offset="0s" duration="2035363368/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                        </video>
+                        <keyword start="0s" duration="84806722/30000s" value="360"/>
+                        <audio-channel-source srcCh="1, 2" role="TEST.TEST-1"/>
+                    </clip>
+                    <gap name="Gap" offset="80259179/24000s" start="86400314/24000s" duration="198198/24000s"/>
+                    <clip offset="80457377/24000s" name="02" duration="111755644/24000s" format="r4" tcFormat="NDF">
+                        <conform-rate scaleEnabled="0" srcFrameRate="29.97"/>
+                        <adjust-conform type="none"/>
+                        <adjust-orientation mapping="normal"/>
+                        <adjust-volume amount="-15dB"/>
+                        <video ref="r6" offset="0s" duration="139695556/30000s">
+                            <adjust-stabilization enabled="0" type="automatic"/>
+                            <audio ref="r6" lane="-1" offset="0s" duration="3352696704/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                        </video>
+                        <keyword start="0s" duration="139695556/30000s" value="360"/>
+                        <audio-channel-source srcCh="1, 2" role="TEST.TEST-1"/>
+                    </clip>
+                </mc-angle>
+                <mc-angle name="AKASA 7" angleID="hDW/rrmYRSC71QNHkPQT6A">
+                    <gap name="Gap" offset="0s" start="86400314/24000s" duration="13251238/24000s"/>
+                    <asset-clip ref="r7" offset="13251238/24000s" name="NORM0003" duration="135135/24000s" format="r8" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <metadata>
+                            <md key="com.apple.proapps.studio.reel" value="AKASA 7"/>
+                        </metadata>
+                    </asset-clip>
+                    <asset-clip ref="r9" offset="13386373/24000s" name="NORM0004" duration="41183142/24000s" format="r8" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <audio-channel-source srcCh="1, 2" role="effects.effects-1"/>
+                        <metadata>
+                            <md key="com.apple.proapps.studio.reel" value="AKASA 7"/>
+                        </metadata>
+                    </asset-clip>
+                    <asset-clip ref="r10" offset="54569515/24000s" name="NORM0005" duration="41183142/24000s" format="r8" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <audio-channel-source srcCh="1, 2" role="effects.effects-1"/>
+                        <metadata>
+                            <md key="com.apple.proapps.studio.reel" value="AKASA 7"/>
+                        </metadata>
+                    </asset-clip>
+                    <asset-clip ref="r11" offset="95752657/24000s" name="NORM0006" duration="41159118/24000s" format="r8" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <audio-channel-source srcCh="1, 2" role="effects.effects-1"/>
+                        <metadata>
+                            <md key="com.apple.proapps.studio.reel" value="AKASA 7"/>
+                        </metadata>
+                    </asset-clip>
+                    <asset-clip ref="r12" offset="136911775/24000s" name="NORM0007" duration="6715709/24000s" format="r8" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <audio-channel-source srcCh="1, 2" role="effects.effects-1"/>
+                        <metadata>
+                            <md key="com.apple.proapps.studio.reel" value="AKASA 7"/>
+                        </metadata>
+                    </asset-clip>
+                </mc-angle>
+                <mc-angle name="b" angleID="60Aqoh8UQOqAek4WM3sV0g">
+                    <asset-clip ref="r13" offset="0s" name="20260307_200847" duration="35035/24000s" format="r14" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <keyword start="0s" duration="90000/60000s" value="AKASA 4, VIDEO"/>
+                    </asset-clip>
+                    <gap name="Gap" offset="35035/24000s" start="86400314/24000s" duration="13633620/24000s"/>
+                    <asset-clip ref="r15" offset="13668655/24000s" name="20260307_201816" duration="52247195/24000s" format="r14" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <keyword start="0s" duration="2177s" value="AKASA 4, VIDEO"/>
+                        <audio-channel-source srcCh="1, 2" role="music.music-1"/>
+                    </asset-clip>
+                    <gap name="Gap" offset="65915850/24000s" start="86400314/24000s" duration="72072/24000s"/>
+                    <asset-clip ref="r16" offset="65987922/24000s" name="20260307_205436" duration="56099043/24000s" format="r14" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <keyword start="0s" duration="140250000/60000s" value="AKASA 4, VIDEO"/>
+                        <audio-channel-source srcCh="1, 2" role="music.music-1"/>
+                    </asset-clip>
+                    <gap name="Gap" offset="122086965/24000s" start="86400314/24000s" duration="73073/24000s"/>
+                    <asset-clip ref="r17" offset="122160038/24000s" name="20260307_213337" duration="68459391/24000s" format="r14" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <keyword start="0s" duration="171150000/60000s" value="AKASA 4, VIDEO"/>
+                        <audio-channel-source srcCh="1, 2" role="music.music-1"/>
+                    </asset-clip>
+                    <gap name="Gap" offset="190619429/24000s" start="86400314/24000s" duration="72072/24000s"/>
+                    <asset-clip ref="r18" offset="190691501/24000s" name="20260307_222113" duration="2231229/24000s" format="r14" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <keyword start="0s" duration="93s" value="AKASA 4, VIDEO"/>
+                        <audio-channel-source srcCh="1, 2" role="music.music-1"/>
+                    </asset-clip>
+                    <gap name="Gap" offset="192922730/24000s" start="86400314/24000s" duration="709709/24000s"/>
+                    <asset-clip ref="r19" offset="193632439/24000s" name="20260307_222314" duration="71071/24000s" format="r14" tcFormat="NDF" audioRole="dialogue">
+                        <conform-rate scaleEnabled="0" srcFrameRate="30"/>
+                        <keyword start="0s" duration="3s" value="AKASA 4, VIDEO"/>
+                        <audio-channel-source srcCh="1, 2" role="music.music-1"/>
+                    </asset-clip>
+                </mc-angle>
+                <mc-angle name="c" angleID="rlVVkMRySGCreSKaZly27g">
+                    <gap name="Gap" offset="0s" start="86400314/24000s" duration="12826814/24000s"/>
+                    <asset-clip ref="r20" offset="25653628/48000s" name="030726_184028_TrLR" start="67228s" duration="268363476/48000s" audioRole="dialogue">
+                        <keyword start="67228s" duration="5591s" value="030726_184028, ZOOM"/>
+                        <audio-channel-source srcCh="1, 2" role="AKASA 7.AKASA 7-1"/>
+                    </asset-clip>
+                    <gap name="Gap" offset="294017104/48000s" start="86400314/24000s" duration="620/48000s"/>
+                    <asset-clip ref="r21" offset="294017724/48000s" name="030726_201340_TrLR" start="72819s" duration="47567520/24000s" audioRole="dialogue">
+                        <keyword start="72819s" duration="1982s" value="030726_201340, ZOOM"/>
+                        <audio-channel-source srcCh="1, 2" role="AKASA 7.AKASA 7-1"/>
+                    </asset-clip>
+                </mc-angle>
+                <mc-angle name="d" angleID="kVJMaNFORi+yi02aE5OIuw">
+                    <gap name="Gap" offset="0s" start="86400314/24000s" duration="12826814/24000s"/>
+                    <asset-clip ref="r22" offset="25653628/48000s" name="030726_184028_TrMic" start="67228s" duration="134183049/24000s" audioRole="dialogue">
+                        <keyword start="67228s" duration="5591s" value="030726_184028, ZOOM"/>
+                        <audio-channel-source srcCh="1, 2" role="piano 1.piano 1-1"/>
+                    </asset-clip>
+                    <asset-clip ref="r23" offset="294019726/48000s" name="030726_201340_TrMic" start="72819s" duration="47567520/24000s" audioRole="dialogue">
+                        <keyword start="72819s" duration="1982s" value="030726_201340, ZOOM"/>
+                        <audio-channel-source srcCh="1, 2" role="piano 1.piano 1-1"/>
+                    </asset-clip>
+                </mc-angle>
+            </multicam>
+        </media>
+        <format id="r3" name="FFVideoFormat1080p2398" frameDuration="1001/24000s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)"/>
+        <format id="r4" name="FFVideoFormat5760x2880p2997" frameDuration="1001/30000s" width="5760" height="2880" colorSpace="1-1-1 (Rec. 709)" projection="equirectangular" stereoscopic="mono"/>
+        <asset id="r5" name="01" uid="976F0DFB557AEA6F014EE67810065042" start="0s" duration="84806807/30000s" hasVideo="1" format="r4" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="976F0DFB557AEA6F014EE67810065042" src="file:///Volumes/500%20gb%20A/MEGARO%202026/INSTA%20X4/360/01.mp4">
+                <bookmark>Ym9va1wEAAAAAAUQQAAAAJtbf2YQ/9oVZn/kDT+/9sH9AqPp0KDVsuL/F2HlZ3u9AAAAAAAAAAAAAAAAAAAAADwDAAAgAAAAAQIAAB8CtYftdq4hKALkmvC6yAIjWq2pYuz2XXuKkk23Z/qXBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAgAAAABAQAASU5TVEEgWDQDAAAAAQEAADM2MAAGAAAAAQEAADAxLm1wNAAAGAAAAAEGAAA4AAAASAAAAFgAAABsAAAAfAAAAIgAAAAIAAAABAMAAGNCAAAAAAAAAAAAAAEKAAAYAAAAAQYAALgAAADIAAAAyAAAAMgAAADIAAAAyAAAAAgAAAAABAAAQcf9NevOFHsYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAAFAAAABAAAAAMDAAAEAAAAHQAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvNTAwJTIwZ2IlMjBBLwAAAAgAAAAEAwAAAAAyY3QAAAAIAAAAAAQAAMHNJ+RAAAAAJAAAAAEBAAA4QkI2MzQ4Mi03MUMzLTM1NkMtQkJDNS1FRjk3QUQyNjIxQjEYAAAAAQIAAAEBAAAAAAAA7xMAAAEAAAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvNTAwIGdiIEEAAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACQgpbnAAAACAAAAAAEAABBx/Zk94AAACQAAAABAQAAQ0EzMjI3QzMtMDIyOS00RkEyLTg5RkItRkY4ODlDMzY1MjMzGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACAAgAAAAAAAAUgAADwAQAAAAAAABAgAAAAAgAAAAAAABEgAAA0AgAAAAAAABIgAAAUAgAAAAAAABMgAAAkAgAAAAAAACAgAABgAgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAABwAAAABBgAA9AIAAAADAAAMAwAAAAMAAAADAAAAAwAAAAMAANgAAAD+////AQAAAIwCAAARAAAABBAAAJgAAAAAAAAABRAAANAAAAAAAAAAEBAAAAABAAAAAAAAQBAAAPAAAAAAAAAAVBAAACgBAAAAAAAAVRAAADQBAAAAAAAAVhAAACABAAAAAAAAACAAABgDAAAAAAAAAiAAANQBAAAAAAAABSAAAEABAAAAAAAAECAAAEgAAAAAAAAAESAAAIgBAAAAAAAAEiAAAGgBAAAAAAAAEyAAAHgBAAAAAAAAICAAALQBAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="a"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:55 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r6" name="02" uid="013A8CD805306D94A9070D2C95CB5F99" start="0s" duration="4656523200/1000000s" hasVideo="1" format="r4" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="013A8CD805306D94A9070D2C95CB5F99" src="file:///Volumes/500%20gb%20A/MEGARO%202026/INSTA%20X4/360/02.mp4">
+                <bookmark>Ym9va1wEAAAAAAUQQAAAAD/0hN6vLMCx8dlJshQZbyv4xRp8lqtcybpK23Rh6UChAAAAAAAAAAAAAAAAAAAAADwDAAAgAAAAAQIAAMxmsI7iS4cwu+KqYnHI6Ru2abVF5oXGNA0YamH11DwDBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAgAAAABAQAASU5TVEEgWDQDAAAAAQEAADM2MAAGAAAAAQEAADAyLm1wNAAAGAAAAAEGAAA4AAAASAAAAFgAAABsAAAAfAAAAIgAAAAIAAAABAMAAGNCAAAAAAAAAAAAAAEKAAAYAAAAAQYAALgAAADIAAAAyAAAAMgAAADIAAAAyAAAAAgAAAAABAAAQcf9L3FI9cMYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAAFAAAABAAAAAMDAAAEAAAAHQAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvNTAwJTIwZ2IlMjBBLwAAAAgAAAAEAwAAAAAyY3QAAAAIAAAAAAQAAMHNJ+RAAAAAJAAAAAEBAAA4QkI2MzQ4Mi03MUMzLTM1NkMtQkJDNS1FRjk3QUQyNjIxQjEYAAAAAQIAAAEBAAAAAAAA7xMAAAEAAAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvNTAwIGdiIEEAAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACQgpbnAAAACAAAAAAEAABBx/Zk94AAACQAAAABAQAAQ0EzMjI3QzMtMDIyOS00RkEyLTg5RkItRkY4ODlDMzY1MjMzGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACAAgAAAAAAAAUgAADwAQAAAAAAABAgAAAAAgAAAAAAABEgAAA0AgAAAAAAABIgAAAUAgAAAAAAABMgAAAkAgAAAAAAACAgAABgAgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAABwAAAABBgAA9AIAAAADAAAMAwAAAAMAAAADAAAAAwAAAAMAANgAAAD+////AQAAAIwCAAARAAAABBAAAJgAAAAAAAAABRAAANAAAAAAAAAAEBAAAAABAAAAAAAAQBAAAPAAAAAAAAAAVBAAACgBAAAAAAAAVRAAADQBAAAAAAAAVhAAACABAAAAAAAAACAAABgDAAAAAAAAAiAAANQBAAAAAAAABSAAAEABAAAAAAAAECAAAEgAAAAAAAAAESAAAIgBAAAAAAAAEiAAAGgBAAAAAAAAEyAAAHgBAAAAAAAAICAAALQBAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="a"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:55 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r7" name="NORM0003" uid="0F9EE6F9B0A542933DC545FB1C8926DA" start="0s" duration="780000/120000s" hasVideo="1" format="r8" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="0F9EE6F9B0A542933DC545FB1C8926DA" src="file:///Volumes/500%20gb%20A/MEGARO%202026/Final%20Cut%20Original%20Media/2026-07-04/NORM0003.mov">
+                <bookmark>Ym9va7wEAAAAAAUQQAAAAHB4ZuH+fYNZC0/2GcPqkNzgtAb6agZT4S19DV2WoOBUAAAAAAAAAAAAAAAAAAAAAJADAAAgAAAAAQIAAFFEAUtgR676H4EkNyPZm4bgWwhSz1blokgllcfxbr6tBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2ABgAAAABAQAARmluYWwgQ3V0IE9yaWdpbmFsIE1lZGlhCgAAAAEBAAAyMDI2LTA3LTA0AAAMAAAAAQEAAE5PUk0wMDAzLm1vdhgAAAABBgAAOAAAAEgAAABYAAAAbAAAAIwAAACgAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADUAAAA5AAAAOQAAADkAAAA5AAAAOQAAAAIAAAAAAQAAEHH/MR8AAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAnAIAAAAAAAAFIAAADAIAAAAAAAAQIAAAHAIAAAAAAAARIAAAUAIAAAAAAAASIAAAMAIAAAAAAAATIAAAQAIAAAAAAAAgIAAAfAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAABADAAAcAwAAKAMAABwDAAAcAwAAHAMAABwDAAAvAAAAAQEAAE5TVVJMQm9va21hcmtRdWFyYW50aW5lTW91bnRlZE5ldHdvcmtWb2x1bWVzS2V5AOQAAAD+////AQAAAKgCAAASAAAABBAAALQAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAAAAwBAAAAAAAAVBAAAEQBAAAAAAAAVRAAAFABAAAAAAAAVhAAADwBAAAAAAAAACAAADQDAAAAAAAAAiAAAPABAAAAAAAABSAAAFwBAAAAAAAAECAAAEgAAAAAAAAAESAAAKQBAAAAAAAAEiAAAIQBAAAAAAAAEyAAAJQBAAAAAAAAICAAANABAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAAWAMAgDwBAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="AKASA 7"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:20:39 +0300"/>
+            </metadata>
+        </asset>
+        <format id="r8" frameDuration="4000/120000s" width="2704" height="1520" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r9" name="NORM0004" uid="93B4726341890072AB973B713CB4FECC" start="0s" duration="1716s" hasVideo="1" format="r8" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="93B4726341890072AB973B713CB4FECC" src="file:///Volumes/500%20gb%20A/MEGARO%202026/Final%20Cut%20Original%20Media/2026-07-04/NORM0004.mov">
+                <bookmark>Ym9va7wEAAAAAAUQQAAAAExAnzxQ+EckgyWUNaIRMcpw5X71R5u2PUlJ9MU8A3mXAAAAAAAAAAAAAAAAAAAAAJADAAAgAAAAAQIAAB832zE/DUyuJk1V8R0T/vWD3PaZY1ZicMep20NmBYyqBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2ABgAAAABAQAARmluYWwgQ3V0IE9yaWdpbmFsIE1lZGlhCgAAAAEBAAAyMDI2LTA3LTA0AAAMAAAAAQEAAE5PUk0wMDA0Lm1vdhgAAAABBgAAOAAAAEgAAABYAAAAbAAAAIwAAACgAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADUAAAA5AAAAOQAAADkAAAA5AAAAOQAAAAIAAAAAAQAAEHH/MWjgAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAnAIAAAAAAAAFIAAADAIAAAAAAAAQIAAAHAIAAAAAAAARIAAAUAIAAAAAAAASIAAAMAIAAAAAAAATIAAAQAIAAAAAAAAgIAAAfAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAABADAAAcAwAAKAMAABwDAAAcAwAAHAMAABwDAAAvAAAAAQEAAE5TVVJMQm9va21hcmtRdWFyYW50aW5lTW91bnRlZE5ldHdvcmtWb2x1bWVzS2V5AOQAAAD+////AQAAAKgCAAASAAAABBAAALQAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAAAAwBAAAAAAAAVBAAAEQBAAAAAAAAVRAAAFABAAAAAAAAVhAAADwBAAAAAAAAACAAADQDAAAAAAAAAiAAAPABAAAAAAAABSAAAFwBAAAAAAAAECAAAEgAAAAAAAAAESAAAKQBAAAAAAAAEiAAAIQBAAAAAAAAEyAAAJQBAAAAAAAAICAAANABAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAAWAMAgDwBAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="AKASA 7"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:20:39 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r10" name="NORM0005" uid="A2818CD932696086A557377A72B4B979" start="0s" duration="1716s" hasVideo="1" format="r8" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="A2818CD932696086A557377A72B4B979" src="file:///Volumes/500%20gb%20A/MEGARO%202026/Final%20Cut%20Original%20Media/2026-07-04/NORM0005.mov">
+                <bookmark>Ym9va7wEAAAAAAUQQAAAAECdkXEBEKv6TZpYjn1nGPI3T/dZr7lmep2KsRkdRXWhAAAAAAAAAAAAAAAAAAAAAJADAAAgAAAAAQIAAEWnFoJm1r5DN5v1LlATbWGqUshpB77eluXQbdqcOk9LBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2ABgAAAABAQAARmluYWwgQ3V0IE9yaWdpbmFsIE1lZGlhCgAAAAEBAAAyMDI2LTA3LTA0AAAMAAAAAQEAAE5PUk0wMDA1Lm1vdhgAAAABBgAAOAAAAEgAAABYAAAAbAAAAIwAAACgAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADUAAAA5AAAAOQAAADkAAAA5AAAAOQAAAAIAAAAAAQAAEHH/Mj9gAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAnAIAAAAAAAAFIAAADAIAAAAAAAAQIAAAHAIAAAAAAAARIAAAUAIAAAAAAAASIAAAMAIAAAAAAAATIAAAQAIAAAAAAAAgIAAAfAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAABADAAAcAwAAKAMAABwDAAAcAwAAHAMAABwDAAAvAAAAAQEAAE5TVVJMQm9va21hcmtRdWFyYW50aW5lTW91bnRlZE5ldHdvcmtWb2x1bWVzS2V5AOQAAAD+////AQAAAKgCAAASAAAABBAAALQAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAAAAwBAAAAAAAAVBAAAEQBAAAAAAAAVRAAAFABAAAAAAAAVhAAADwBAAAAAAAAACAAADQDAAAAAAAAAiAAAPABAAAAAAAABSAAAFwBAAAAAAAAECAAAEgAAAAAAAAAESAAAKQBAAAAAAAAEiAAAIQBAAAAAAAAEyAAAJQBAAAAAAAAICAAANABAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAAWAMAgDwBAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="AKASA 7"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:21:21 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r11" name="NORM0006" uid="7DE75862DD8A5C5D40EF18A4C461113C" start="0s" duration="1715s" hasVideo="1" format="r8" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="7DE75862DD8A5C5D40EF18A4C461113C" src="file:///Volumes/500%20gb%20A/MEGARO%202026/Final%20Cut%20Original%20Media/2026-07-04/NORM0006.mov">
+                <bookmark>Ym9va7wEAAAAAAUQQAAAAIiTUsXuBadtIIE0vH5GjVLW3xqq3y0fAvQ0Qyi+hgKqAAAAAAAAAAAAAAAAAAAAAJADAAAgAAAAAQIAAPRVoopE1xQ9K7PfbC8Mqgt2yUOOAqmLzZhuHHwPdhvFBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2ABgAAAABAQAARmluYWwgQ3V0IE9yaWdpbmFsIE1lZGlhCgAAAAEBAAAyMDI2LTA3LTA0AAAMAAAAAQEAAE5PUk0wMDA2Lm1vdhgAAAABBgAAOAAAAEgAAABYAAAAbAAAAIwAAACgAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADUAAAA5AAAAOQAAADkAAAA5AAAAOQAAAAIAAAAAAQAAEHH/MxXAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAnAIAAAAAAAAFIAAADAIAAAAAAAAQIAAAHAIAAAAAAAARIAAAUAIAAAAAAAASIAAAMAIAAAAAAAATIAAAQAIAAAAAAAAgIAAAfAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAABADAAAcAwAAKAMAABwDAAAcAwAAHAMAABwDAAAvAAAAAQEAAE5TVVJMQm9va21hcmtRdWFyYW50aW5lTW91bnRlZE5ldHdvcmtWb2x1bWVzS2V5AOQAAAD+////AQAAAKgCAAASAAAABBAAALQAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAAAAwBAAAAAAAAVBAAAEQBAAAAAAAAVRAAAFABAAAAAAAAVhAAADwBAAAAAAAAACAAADQDAAAAAAAAAiAAAPABAAAAAAAABSAAAFwBAAAAAAAAECAAAEgAAAAAAAAAESAAAKQBAAAAAAAAEiAAAIQBAAAAAAAAEyAAAJQBAAAAAAAAICAAANABAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAAWAMAgDwBAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="AKASA 7"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:22:37 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r12" name="NORM0007" uid="103C83426FDD1070AEA4EE705B04BBDC" start="0s" duration="33580000/120000s" hasVideo="1" format="r8" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="103C83426FDD1070AEA4EE705B04BBDC" src="file:///Volumes/500%20gb%20A/MEGARO%202026/Final%20Cut%20Original%20Media/2026-07-04/NORM0007.mov">
+                <bookmark>Ym9va7wEAAAAAAUQQAAAANrubRPRCPHet+NXjFUAScLur87BFNRPnWtGUZjGsns7AAAAAAAAAAAAAAAAAAAAAJADAAAgAAAAAQIAAATxBF7awjkJc/Mko8BviFflM4F+0YGjmDa9K2jhC6AyBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2ABgAAAABAQAARmluYWwgQ3V0IE9yaWdpbmFsIE1lZGlhCgAAAAEBAAAyMDI2LTA3LTA0AAAMAAAAAQEAAE5PUk0wMDA3Lm1vdhgAAAABBgAAOAAAAEgAAABYAAAAbAAAAIwAAACgAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADUAAAA5AAAAOQAAADkAAAA5AAAAOQAAAAIAAAAAAQAAEHH/M+wAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAnAIAAAAAAAAFIAAADAIAAAAAAAAQIAAAHAIAAAAAAAARIAAAUAIAAAAAAAASIAAAMAIAAAAAAAATIAAAQAIAAAAAAAAgIAAAfAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAABADAAAcAwAAKAMAABwDAAAcAwAAHAMAABwDAAAvAAAAAQEAAE5TVVJMQm9va21hcmtRdWFyYW50aW5lTW91bnRlZE5ldHdvcmtWb2x1bWVzS2V5AOQAAAD+////AQAAAKgCAAASAAAABBAAALQAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAAAAwBAAAAAAAAVBAAAEQBAAAAAAAAVRAAAFABAAAAAAAAVhAAADwBAAAAAAAAACAAADQDAAAAAAAAAiAAAPABAAAAAAAABSAAAFwBAAAAAAAAECAAAEgAAAAAAAAAESAAAKQBAAAAAAAAEiAAAIQBAAAAAAAAEyAAAJQBAAAAAAAAICAAANABAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAAWAMAgDwBAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="AKASA 7"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>HEVC</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:23:51 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r13" name="20260307_200847" uid="27623F5C8FF9DB0997393DF31BFF7F3D" start="0s" duration="90000/60000s" hasVideo="1" format="r14" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="27623F5C8FF9DB0997393DF31BFF7F3D" src="file:///Volumes/500%20gb%20A/MEGARO%202026/AKASA%204/VIDEO/20260307_200847.MOV">
+                <bookmark>Ym9va2wEAAAAAAUQQAAAAPjxTcVYhaV9yDE1UMkfcLvW9Udt8IVB4Di+MlRnINsOAAAAAAAAAAAAAAAAAAAAAEwDAAAgAAAAAQIAAHxYLHHWD2+6r5Lz/wE49yPw0x0dFjosbqrvlZZ+njs8BAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAcAAAABAQAAQUtBU0EgNAAFAAAAAQEAAFZJREVPAAAAEwAAAAEBAAAyMDI2MDMwN18yMDA4NDcuTU9WABgAAAABBgAAOAAAAEgAAABYAAAAbAAAAHwAAACMAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADIAAAA2AAAANgAAADYAAAA2AAAANgAAAAIAAAAAAQAAEHHrkmQAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAkAIAAAAAAAAFIAAAAAIAAAAAAAAQIAAAEAIAAAAAAAARIAAARAIAAAAAAAASIAAAJAIAAAAAAAATIAAANAIAAAAAAAAgIAAAcAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAAAQDAAAQAwAAHAMAABADAAAQAwAAEAMAABADAADYAAAA/v///wEAAACcAgAAEQAAAAQQAACoAAAAAAAAAAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAFQQAAA4AQAAAAAAAFUQAABEAQAAAAAAAFYQAAAwAQAAAAAAAAAgAAAoAwAAAAAAAAIgAADkAQAAAAAAAAUgAABQAQAAAAAAABAgAABIAAAAAAAAABEgAACYAQAAAAAAABIgAAB4AQAAAAAAABMgAACIAQAAAAAAACAgAADEAQAAAAAAABDQAAAsAAAAAAAAAITwAAAEAAAAAAAAAA==</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="b"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="SD (6-1-6)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>AVC Coding</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:44 +0300"/>
+            </metadata>
+        </asset>
+        <format id="r14" frameDuration="2000/60000s" width="2704" height="1520" colorSpace="6-1-6 (Rec. 601 (NTSC))"/>
+        <asset id="r15" name="20260307_201816" uid="468ABF9B41709F846A81DA0924D42276" start="0s" duration="2177s" hasVideo="1" format="r14" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="468ABF9B41709F846A81DA0924D42276" src="file:///Volumes/500%20gb%20A/MEGARO%202026/AKASA%204/VIDEO/20260307_201816.MOV">
+                <bookmark>Ym9va2wEAAAAAAUQQAAAAIrtLaLvy/Opk9HHCwHbDlCehVZqzvK9zi4bn7bQdzeKAAAAAAAAAAAAAAAAAAAAAEwDAAAgAAAAAQIAABRkkQ4HyW9T/4V+bMDG35YBWzwBdP10r5LEx2lvlSliBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAcAAAABAQAAQUtBU0EgNAAFAAAAAQEAAFZJREVPAAAAEwAAAAEBAAAyMDI2MDMwN18yMDE4MTYuTU9WABgAAAABBgAAOAAAAEgAAABYAAAAbAAAAHwAAACMAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADIAAAA2AAAANgAAADYAAAA2AAAANgAAAAIAAAAAAQAAEHHrkqtAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAkAIAAAAAAAAFIAAAAAIAAAAAAAAQIAAAEAIAAAAAAAARIAAARAIAAAAAAAASIAAAJAIAAAAAAAATIAAANAIAAAAAAAAgIAAAcAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAAAQDAAAQAwAAHAMAABADAAAQAwAAEAMAABADAADYAAAA/v///wEAAACcAgAAEQAAAAQQAACoAAAAAAAAAAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAFQQAAA4AQAAAAAAAFUQAABEAQAAAAAAAFYQAAAwAQAAAAAAAAAgAAAoAwAAAAAAAAIgAADkAQAAAAAAAAUgAABQAQAAAAAAABAgAABIAAAAAAAAABEgAACYAQAAAAAAABIgAAB4AQAAAAAAABMgAACIAQAAAAAAACAgAADEAQAAAAAAABDQAAAsAAAAAAAAAITwAAAEAAAAAAAAAA==</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="b"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="SD (6-1-6)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>AVC Coding</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:44 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r16" name="20260307_205436" uid="245E7C7863D12F2526E17E16B76DD155" start="0s" duration="140250000/60000s" hasVideo="1" format="r14" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="245E7C7863D12F2526E17E16B76DD155" src="file:///Volumes/500%20gb%20A/MEGARO%202026/AKASA%204/VIDEO/20260307_205436.MOV">
+                <bookmark>Ym9va2wEAAAAAAUQQAAAAPurNmcVp91uuyabuPNr63Rif8ub10ijho2d676YeLfUAAAAAAAAAAAAAAAAAAAAAEwDAAAgAAAAAQIAAEiBK1gCll1M4ixj6kFB/0P7Pyi2xZrgxxjGxbby6BHxBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAcAAAABAQAAQUtBU0EgNAAFAAAAAQEAAFZJREVPAAAAEwAAAAEBAAAyMDI2MDMwN18yMDU0MzYuTU9WABgAAAABBgAAOAAAAEgAAABYAAAAbAAAAHwAAACMAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADIAAAA2AAAANgAAADYAAAA2AAAANgAAAAIAAAAAAQAAEHHrk7vAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAkAIAAAAAAAAFIAAAAAIAAAAAAAAQIAAAEAIAAAAAAAARIAAARAIAAAAAAAASIAAAJAIAAAAAAAATIAAANAIAAAAAAAAgIAAAcAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAAAQDAAAQAwAAHAMAABADAAAQAwAAEAMAABADAADYAAAA/v///wEAAACcAgAAEQAAAAQQAACoAAAAAAAAAAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAFQQAAA4AQAAAAAAAFUQAABEAQAAAAAAAFYQAAAwAQAAAAAAAAAgAAAoAwAAAAAAAAIgAADkAQAAAAAAAAUgAABQAQAAAAAAABAgAABIAAAAAAAAABEgAACYAQAAAAAAABIgAAB4AQAAAAAAABMgAACIAQAAAAAAACAgAADEAQAAAAAAABDQAAAsAAAAAAAAAITwAAAEAAAAAAAAAA==</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="b"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="SD (6-1-6)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>AVC Coding</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:44 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r17" name="20260307_213337" uid="7F5099E36A22AB8BF3E34F1BE3237547" start="0s" duration="171150000/60000s" hasVideo="1" format="r14" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="7F5099E36A22AB8BF3E34F1BE3237547" src="file:///Volumes/500%20gb%20A/MEGARO%202026/AKASA%204/VIDEO/20260307_213337.MOV">
+                <bookmark>Ym9va2wEAAAAAAUQQAAAAOMjJptQiGLatLpRQNDrYvjxLlP1Pvs1QoPFGkSEWIV5AAAAAAAAAAAAAAAAAAAAAEwDAAAgAAAAAQIAAEPdFUgnDP/9oIqVHzfp+KnyUmICtAXt6LGP1NeeKNMOBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAcAAAABAQAAQUtBU0EgNAAFAAAAAQEAAFZJREVPAAAAEwAAAAEBAAAyMDI2MDMwN18yMTMzMzcuTU9WABgAAAABBgAAOAAAAEgAAABYAAAAbAAAAHwAAACMAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADIAAAA2AAAANgAAADYAAAA2AAAANgAAAAIAAAAAAQAAEHHrlOBAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAkAIAAAAAAAAFIAAAAAIAAAAAAAAQIAAAEAIAAAAAAAARIAAARAIAAAAAAAASIAAAJAIAAAAAAAATIAAANAIAAAAAAAAgIAAAcAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAAAQDAAAQAwAAHAMAABADAAAQAwAAEAMAABADAADYAAAA/v///wEAAACcAgAAEQAAAAQQAACoAAAAAAAAAAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAFQQAAA4AQAAAAAAAFUQAABEAQAAAAAAAFYQAAAwAQAAAAAAAAAgAAAoAwAAAAAAAAIgAADkAQAAAAAAAAUgAABQAQAAAAAAABAgAABIAAAAAAAAABEgAACYAQAAAAAAABIgAAB4AQAAAAAAABMgAACIAQAAAAAAACAgAADEAQAAAAAAABDQAAAsAAAAAAAAAITwAAAEAAAAAAAAAA==</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="b"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="SD (6-1-6)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>AVC Coding</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:44 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r18" name="20260307_222113" uid="B1B097A259AA78DB8D0EEA3A262FDC27" start="0s" duration="93s" hasVideo="1" format="r14" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="B1B097A259AA78DB8D0EEA3A262FDC27" src="file:///Volumes/500%20gb%20A/MEGARO%202026/AKASA%204/VIDEO/20260307_222113.MOV">
+                <bookmark>Ym9va2wEAAAAAAUQQAAAABCaC9vUQ5JuCGXZQWKH9iiQ5zEUCo2OQdrkat53NcYWAAAAAAAAAAAAAAAAAAAAAEwDAAAgAAAAAQIAAA5WbpdrXYVIpqcCCtfJ9bIp/1eZMxI1KJMh+DsEEtegBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAcAAAABAQAAQUtBU0EgNAAFAAAAAQEAAFZJREVPAAAAEwAAAAEBAAAyMDI2MDMwN18yMjIxMTMuTU9WABgAAAABBgAAOAAAAEgAAABYAAAAbAAAAHwAAACMAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADIAAAA2AAAANgAAADYAAAA2AAAANgAAAAIAAAAAAQAAEHHrlkVAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAkAIAAAAAAAAFIAAAAAIAAAAAAAAQIAAAEAIAAAAAAAARIAAARAIAAAAAAAASIAAAJAIAAAAAAAATIAAANAIAAAAAAAAgIAAAcAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAAAQDAAAQAwAAHAMAABADAAAQAwAAEAMAABADAADYAAAA/v///wEAAACcAgAAEQAAAAQQAACoAAAAAAAAAAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAFQQAAA4AQAAAAAAAFUQAABEAQAAAAAAAFYQAAAwAQAAAAAAAAAgAAAoAwAAAAAAAAIgAADkAQAAAAAAAAUgAABQAQAAAAAAABAgAABIAAAAAAAAABEgAACYAQAAAAAAABIgAAB4AQAAAAAAABMgAACIAQAAAAAAACAgAADEAQAAAAAAABDQAAAsAAAAAAAAAITwAAAEAAAAAAAAAA==</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="b"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="SD (6-1-6)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>AVC Coding</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:44 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r19" name="20260307_222314" uid="16203F75B3968823E8A9FE7A3267BCDD" start="0s" duration="3s" hasVideo="1" format="r14" hasAudio="1" videoSources="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="16203F75B3968823E8A9FE7A3267BCDD" src="file:///Volumes/500%20gb%20A/MEGARO%202026/AKASA%204/VIDEO/20260307_222314.MOV">
+                <bookmark>Ym9va2wEAAAAAAUQQAAAAKXXMgBwYdrerxI660iZuMD6isXricq3xB53YB6XuJSwAAAAAAAAAAAAAAAAAAAAAEwDAAAgAAAAAQIAAE2DGj2BfoccuyVvkp2hUeZZULiuQZSHQtqGj/OI/OpOBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAcAAAABAQAAQUtBU0EgNAAFAAAAAQEAAFZJREVPAAAAEwAAAAEBAAAyMDI2MDMwN18yMjIzMTQuTU9WABgAAAABBgAAOAAAAEgAAABYAAAAbAAAAHwAAACMAAAACAAAAAQDAABjQgAAAAAAAAAAAAABCgAAGAAAAAEGAADIAAAA2AAAANgAAADYAAAA2AAAANgAAAAIAAAAAAQAAEHHrllSAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAQUAAAQAAAADAwAABQAAAAQAAAADAwAABAAAAB0AAAABCQAAZmlsZTovLy9Wb2x1bWVzLzUwMCUyMGdiJTIwQS8AAAAIAAAABAMAAAAAMmN0AAAACAAAAAAEAADBzSfkQAAAACQAAAABAQAAOEJCNjM0ODItNzFDMy0zNTZDLUJCQzUtRUY5N0FEMjYyMUIxGAAAAAECAAABAQAAAAAAAO8TAAABAAAAAAAAAAAAAAARAAAAAQEAAC9Wb2x1bWVzLzUwMCBnYiBBAAAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAkIKW5wAAAAgAAAAABAAAQcf2ZPeAAAAkAAAAAQEAAENBMzIyN0MzLTAyMjktNEZBMi04OUZCLUZGODg5QzM2NTIzMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAYAAAAP7///8A8AAAAAAAAAcAAAACIAAAkAIAAAAAAAAFIAAAAAIAAAAAAAAQIAAAEAIAAAAAAAARIAAARAIAAAAAAAASIAAAJAIAAAAAAAATIAAANAIAAAAAAAAgIAAAcAIAAAAAAAAEAAAAAwMAAADwAAAEAAAAAwMAAAAAAAAEAAAAAwMAAAEAAAAcAAAAAQYAAAQDAAAQAwAAHAMAABADAAAQAwAAEAMAABADAADYAAAA/v///wEAAACcAgAAEQAAAAQQAACoAAAAAAAAAAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAFQQAAA4AQAAAAAAAFUQAABEAQAAAAAAAFYQAAAwAQAAAAAAAAAgAAAoAwAAAAAAAAIgAADkAQAAAAAAAAUgAABQAQAAAAAAABAgAABIAAAAAAAAABEgAACYAQAAAAAAABIgAAB4AQAAAAAAABMgAACIAQAAAAAAACAgAADEAQAAAAAAABDQAAAsAAAAAAAAAITwAAAEAAAAAAAAAA==</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="b"/>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="SD (6-1-6)"/>
+                <md key="com.apple.proapps.studio.cameraISO" value="0"/>
+                <md key="com.apple.proapps.studio.cameraColorTemperature" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>AVC Coding</string>
+                        <string>MPEG-4 AAC</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:17:44 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r20" name="030726_184028_TrLR" uid="7DEB0F90C2A85D478069AA51D98CC84F" start="67228s" duration="5591s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="7DEB0F90C2A85D478069AA51D98CC84F" src="file:///Volumes/500%20gb%20A/MEGARO%202026/ZOOM/030726_184028/030726_184028_TrLR.WAV">
+                <bookmark>Ym9va3QEAAAAAAUQQAAAALaDVCtU8/KCk3jKWh//3KMgvzWyK/Aa5FCEWD6X1pYKAAAAAAAAAAAAAAAAAAAAAFQDAAAgAAAAAQIAAN86VI+tn3dpZVCMcV1WYwCLiRVO2cZw9zixyBqSSyZ4BAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAQAAAABAQAAWk9PTQ0AAAABAQAAMDMwNzI2XzE4NDAyOAAAABYAAAABAQAAMDMwNzI2XzE4NDAyOF9UckxSLldBVgAAGAAAAAEGAAA4AAAASAAAAFgAAABsAAAAeAAAAJAAAAAIAAAABAMAAGNCAAAAAAAAAAAAAAEKAAAYAAAAAQYAANAAAADgAAAA4AAAAOAAAADgAAAA4AAAAAgAAAAABAAAQcf8B7YAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAAFAAAABAAAAAMDAAAEAAAAHQAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvNTAwJTIwZ2IlMjBBLwAAAAgAAAAEAwAAAAAyY3QAAAAIAAAAAAQAAMHNJ+RAAAAAJAAAAAEBAAA4QkI2MzQ4Mi03MUMzLTM1NkMtQkJDNS1FRjk3QUQyNjIxQjEYAAAAAQIAAAEBAAAAAAAA7xMAAAEAAAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvNTAwIGdiIEEAAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACQgpbnAAAACAAAAAAEAABBx/Zk94AAACQAAAABAQAAQ0EzMjI3QzMtMDIyOS00RkEyLTg5RkItRkY4ODlDMzY1MjMzGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACYAgAAAAAAAAUgAAAIAgAAAAAAABAgAAAYAgAAAAAAABEgAABMAgAAAAAAABIgAAAsAgAAAAAAABMgAAA8AgAAAAAAACAgAAB4AgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAABwAAAABBgAADAMAABgDAAAkAwAAGAMAABgDAAAYAwAAGAMAANgAAAD+////AQAAAKQCAAARAAAABBAAALAAAAAAAAAABRAAAOgAAAAAAAAAEBAAABgBAAAAAAAAQBAAAAgBAAAAAAAAVBAAAEABAAAAAAAAVRAAAEwBAAAAAAAAVhAAADgBAAAAAAAAACAAADADAAAAAAAAAiAAAOwBAAAAAAAABSAAAFgBAAAAAAAAECAAAEgAAAAAAAAAESAAAKABAAAAAAAAEiAAAIABAAAAAAAAEyAAAJABAAAAAAAAICAAAMwBAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="c"/>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:19:18 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r21" name="030726_201340_TrLR" uid="349A0CFB88373B7784664576A82ED848" start="72819s" duration="1982s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="349A0CFB88373B7784664576A82ED848" src="file:///Volumes/500%20gb%20A/MEGARO%202026/ZOOM/030726_201340/030726_201340_TrLR.WAV">
+                <bookmark>Ym9va3QEAAAAAAUQQAAAAP92imzCCLAaTO5D/6n1oYSZa9D9ePwS58HUBrQFTJXJAAAAAAAAAAAAAAAAAAAAAFQDAAAgAAAAAQIAAN5HLJkkPNl7w21FKU+tvUJMIPkevO77uycNthwkXA0sBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAQAAAABAQAAWk9PTQ0AAAABAQAAMDMwNzI2XzIwMTM0MAAAABYAAAABAQAAMDMwNzI2XzIwMTM0MF9UckxSLldBVgAAGAAAAAEGAAA4AAAASAAAAFgAAABsAAAAeAAAAJAAAAAIAAAABAMAAGNCAAAAAAAAAAAAAAEKAAAYAAAAAQYAANAAAADgAAAA4AAAAOAAAADgAAAA4AAAAAgAAAAABAAAQcf8EqIAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAAFAAAABAAAAAMDAAAEAAAAHQAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvNTAwJTIwZ2IlMjBBLwAAAAgAAAAEAwAAAAAyY3QAAAAIAAAAAAQAAMHNJ+RAAAAAJAAAAAEBAAA4QkI2MzQ4Mi03MUMzLTM1NkMtQkJDNS1FRjk3QUQyNjIxQjEYAAAAAQIAAAEBAAAAAAAA7xMAAAEAAAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvNTAwIGdiIEEAAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACQgpbnAAAACAAAAAAEAABBx/Zk94AAACQAAAABAQAAQ0EzMjI3QzMtMDIyOS00RkEyLTg5RkItRkY4ODlDMzY1MjMzGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACYAgAAAAAAAAUgAAAIAgAAAAAAABAgAAAYAgAAAAAAABEgAABMAgAAAAAAABIgAAAsAgAAAAAAABMgAAA8AgAAAAAAACAgAAB4AgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAABwAAAABBgAADAMAABgDAAAkAwAAGAMAABgDAAAYAwAAGAMAANgAAAD+////AQAAAKQCAAARAAAABBAAALAAAAAAAAAABRAAAOgAAAAAAAAAEBAAABgBAAAAAAAAQBAAAAgBAAAAAAAAVBAAAEABAAAAAAAAVRAAAEwBAAAAAAAAVhAAADgBAAAAAAAAACAAADADAAAAAAAAAiAAAOwBAAAAAAAABSAAAFgBAAAAAAAAECAAAEgAAAAAAAAAESAAAKABAAAAAAAAEiAAAIABAAAAAAAAEyAAAJABAAAAAAAAICAAAMwBAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="c"/>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:19:18 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r22" name="030726_184028_TrMic" uid="AA1E554AD14EB6020A0903B3C195045B" start="67228s" duration="5591s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="AA1E554AD14EB6020A0903B3C195045B" src="file:///Volumes/500%20gb%20A/MEGARO%202026/ZOOM/030726_184028/030726_184028_TrMic.WAV">
+                <bookmark>Ym9va3QEAAAAAAUQQAAAALOptj2mi3CeaDv8HM7GRkfyJ6CO+WSwJZT91JMAd1vxAAAAAAAAAAAAAAAAAAAAAFQDAAAgAAAAAQIAABWrYygmBmDB7J/t2ScX20maa8auiwHwHZ9y2jDqprzCBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAQAAAABAQAAWk9PTQ0AAAABAQAAMDMwNzI2XzE4NDAyOAAAABcAAAABAQAAMDMwNzI2XzE4NDAyOF9Uck1pYy5XQVYAGAAAAAEGAAA4AAAASAAAAFgAAABsAAAAeAAAAJAAAAAIAAAABAMAAGNCAAAAAAAAAAAAAAEKAAAYAAAAAQYAANAAAADgAAAA4AAAAOAAAADgAAAA4AAAAAgAAAAABAAAQcf8B7YAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAAFAAAABAAAAAMDAAAEAAAAHQAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvNTAwJTIwZ2IlMjBBLwAAAAgAAAAEAwAAAAAyY3QAAAAIAAAAAAQAAMHNJ+RAAAAAJAAAAAEBAAA4QkI2MzQ4Mi03MUMzLTM1NkMtQkJDNS1FRjk3QUQyNjIxQjEYAAAAAQIAAAEBAAAAAAAA7xMAAAEAAAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvNTAwIGdiIEEAAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACQgpbnAAAACAAAAAAEAABBx/Zk94AAACQAAAABAQAAQ0EzMjI3QzMtMDIyOS00RkEyLTg5RkItRkY4ODlDMzY1MjMzGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACYAgAAAAAAAAUgAAAIAgAAAAAAABAgAAAYAgAAAAAAABEgAABMAgAAAAAAABIgAAAsAgAAAAAAABMgAAA8AgAAAAAAACAgAAB4AgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAABwAAAABBgAADAMAABgDAAAkAwAAGAMAABgDAAAYAwAAGAMAANgAAAD+////AQAAAKQCAAARAAAABBAAALAAAAAAAAAABRAAAOgAAAAAAAAAEBAAABgBAAAAAAAAQBAAAAgBAAAAAAAAVBAAAEABAAAAAAAAVRAAAEwBAAAAAAAAVhAAADgBAAAAAAAAACAAADADAAAAAAAAAiAAAOwBAAAAAAAABSAAAFgBAAAAAAAAECAAAEgAAAAAAAAAESAAAKABAAAAAAAAEiAAAIABAAAAAAAAEyAAAJABAAAAAAAAICAAAMwBAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="c"/>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:19:18 +0300"/>
+            </metadata>
+        </asset>
+        <asset id="r23" name="030726_201340_TrMic" uid="0394706BCA8685F089EB1AF0717EFB18" start="72819s" duration="1982s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" sig="0394706BCA8685F089EB1AF0717EFB18" src="file:///Volumes/500%20gb%20A/MEGARO%202026/ZOOM/030726_201340/030726_201340_TrMic.WAV">
+                <bookmark>Ym9va3QEAAAAAAUQQAAAAPIm9wZ/ZIRqGzqCZN+T1dzkE90MyBm53W4EtYBPOUYyAAAAAAAAAAAAAAAAAAAAAFQDAAAgAAAAAQIAAGejqSNjXdJLIKLkdEas6PEllIQUnM/J41BI0zpjf+XNBAAAAAMDAAAAGAAoBwAAAAEBAABWb2x1bWVzAAgAAAABAQAANTAwIGdiIEELAAAAAQEAAE1FR0FSTyAyMDI2AAQAAAABAQAAWk9PTQ0AAAABAQAAMDMwNzI2XzIwMTM0MAAAABcAAAABAQAAMDMwNzI2XzIwMTM0MF9Uck1pYy5XQVYAGAAAAAEGAAA4AAAASAAAAFgAAABsAAAAeAAAAJAAAAAIAAAABAMAAGNCAAAAAAAAAAAAAAEKAAAYAAAAAQYAANAAAADgAAAA4AAAAOAAAADgAAAA4AAAAAgAAAAABAAAQcf8EqIAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAAAAMDAAAFAAAABAAAAAMDAAAEAAAAHQAAAAEJAABmaWxlOi8vL1ZvbHVtZXMvNTAwJTIwZ2IlMjBBLwAAAAgAAAAEAwAAAAAyY3QAAAAIAAAAAAQAAMHNJ+RAAAAAJAAAAAEBAAA4QkI2MzQ4Mi03MUMzLTM1NkMtQkJDNS1FRjk3QUQyNjIxQjEYAAAAAQIAAAEBAAAAAAAA7xMAAAEAAAAAAAAAAAAAABEAAAABAQAAL1ZvbHVtZXMvNTAwIGdiIEEAAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACQgpbnAAAACAAAAAAEAABBx/Zk94AAACQAAAABAQAAQ0EzMjI3QzMtMDIyOS00RkEyLTg5RkItRkY4ODlDMzY1MjMzGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAABgAAAA/v///wDwAAAAAAAABwAAAAIgAACYAgAAAAAAAAUgAAAIAgAAAAAAABAgAAAYAgAAAAAAABEgAABMAgAAAAAAABIgAAAsAgAAAAAAABMgAAA8AgAAAAAAACAgAAB4AgAAAAAAAAQAAAADAwAAAPAAAAQAAAADAwAAAAAAAAQAAAADAwAAAQAAABwAAAABBgAADAMAABgDAAAkAwAAGAMAABgDAAAYAwAAGAMAANgAAAD+////AQAAAKQCAAARAAAABBAAALAAAAAAAAAABRAAAOgAAAAAAAAAEBAAABgBAAAAAAAAQBAAAAgBAAAAAAAAVBAAAEABAAAAAAAAVRAAAEwBAAAAAAAAVhAAADgBAAAAAAAAACAAADADAAAAAAAAAiAAAOwBAAAAAAAABSAAAFgBAAAAAAAAECAAAEgAAAAAAAAAESAAAKABAAAAAAAAEiAAAIABAAAAAAAAEyAAAJABAAAAAAAAICAAAMwBAAAAAAAAENAAACwAAAAAAAAAhPAAAAQAAAAAAAAA</bookmark>
+            </media-rep>
+            <metadata>
+                <md key="com.apple.proapps.mio.cameraName" value="c"/>
+                <md key="com.apple.proapps.mio.ingestDate" value="2026-07-05 14:19:18 +0300"/>
+            </metadata>
+        </asset>
+    </resources>
+    <library location="file:///Volumes/500%20gb%20A/MEGARO%202026/megaro%202026.fcpbundle/">
+        <event name="5-7-26" uid="B467957F-3439-4CD7-96A8-9FEE626B55E3">
+            <project name="megaro 2026" uid="92BD7BCF-DB9D-4427-B4F8-A57BD07EA125" modDate="2026-07-11 18:18:54 +0300">
+                <sequence format="r1" duration="34400/3000s" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <mc-clip ref="r2" offset="0s" name="megaro 2026" start="2245800/3000s" duration="5700/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="all">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                        <mc-clip ref="r2" offset="5700/3000s" name="megaro 2026" start="2251500/3000s" duration="5100/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="audio">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="hDW/rrmYRSC71QNHkPQT6A" srcEnable="video"/>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                        <mc-clip ref="r2" offset="10800/3000s" name="megaro 2026" start="2256600/3000s" duration="4500/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="60Aqoh8UQOqAek4WM3sV0g" srcEnable="video"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="audio">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                        <mc-clip ref="r2" offset="15300/3000s" name="megaro 2026" start="2261100/3000s" duration="4100/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="audio">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="hDW/rrmYRSC71QNHkPQT6A" srcEnable="video"/>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                        <mc-clip ref="r2" offset="19400/3000s" name="megaro 2026" start="2265200/3000s" duration="4000/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="all">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                        <mc-clip ref="r2" offset="23400/3000s" name="megaro 2026" start="2269200/3000s" duration="3800/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="audio">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="hDW/rrmYRSC71QNHkPQT6A" srcEnable="video"/>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                        <mc-clip ref="r2" offset="27200/3000s" name="megaro 2026" start="2273000/3000s" duration="7200/3000s">
+                            <conform-rate scaleEnabled="0" srcFrameRate="23.98"/>
+                            <mc-source angleID="60Aqoh8UQOqAek4WM3sV0g" srcEnable="video"/>
+                            <mc-source angleID="fCeGjwuKTd6tPCNnAX+CzQ" srcEnable="audio">
+                                <audio-role-source role="TEST.TEST-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="kVJMaNFORi+yi02aE5OIuw" srcEnable="audio">
+                                <audio-role-source role="piano 1.piano 1-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                            <mc-source angleID="rlVVkMRySGCreSKaZly27g" srcEnable="audio">
+                                <audio-role-source role="AKASA 7.AKASA 7-1">
+                                    <adjust-panner mode="1 (Stereo Left/Right)" amount="0"/>
+                                </audio-role-source>
+                            </mc-source>
+                        </mc-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection name="Projects" match="all">
+            <match-clip rule="is" type="project"/>
+        </smart-collection>
+        <smart-collection name="All Video" match="any">
+            <match-media rule="is" type="videoOnly"/>
+            <match-media rule="is" type="videoWithAudio"/>
+        </smart-collection>
+        <smart-collection name="Audio Only" match="all">
+            <match-media rule="is" type="audioOnly"/>
+        </smart-collection>
+        <smart-collection name="Stills" match="all">
+            <match-media rule="is" type="stills"/>
+        </smart-collection>
+        <smart-collection name="Favorites" match="all">
+            <match-ratings value="favorites"/>
+        </smart-collection>
+        <smart-collection name="Missing Analysis" match="all">
+            <match-analysis-type rule="isMissing" value="any"/>
+        </smart-collection>
+    </library>
+</fcpxml>
